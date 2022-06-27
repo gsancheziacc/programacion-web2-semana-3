@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IACC - SEMANA 03</title>
+    <script>
+        function onClickFactorial(){
+            const value = document.getElementById("inputNumber").value;
+            document.getElementById("result").innerHTML = calculateFactorial(value);
+            return false;
+        }
+        //Se implementa función recursiva para calcular el factorial de un número
+        function calculateFactorial(n) {
+            if (n === 0){
+                return 1;
+            }
+            return n * calculateFactorial(n-1);
+        }
+        function showMessage(){
+            alert("“usted es mayor de edad” si la edad es mayor que 18");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <h1>Tarea Semana 03 - Programación web II</h1>
+    <h2>Ejercicio 2 - Calcular Factorial</h2>
+    <form>
+        <label for="inputNumber">Ingrese un número:</label>
+        <input id="inputNumber" type="number"/>
+        <button type="button" onclick="onClickFactorial()">Calcular Factorial</button>
+        <div style="display: flex; flex-direction: row">
+            <div><strong>El resultado es:</strong>&nbsp;</div>
+            <div id="result"></div>
+        </div>
+    </form>
+    <h2>Ejercicio 3 - Mostrar Mensaje</h2>
+    <button onclick="showMessage()">Mostrar Mensaje</button>
+</body>
+</html>
